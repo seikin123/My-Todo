@@ -1,5 +1,9 @@
 class CardController < ApplicationController
 
+  def show
+    @card = Card.find_by(id: params[:id])
+  end
+
   def new
     @card = Card.new
     @list = List.find_by(id: params[:list_id])
@@ -13,6 +17,7 @@ class CardController < ApplicationController
       render action: :new
     end
   end
+
 
   private
     def card_params
