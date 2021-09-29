@@ -1,4 +1,5 @@
 class CardController < ApplicationController
+  before_action :authenticate_user!
   # show・edit・updateアクションを呼ぶ前にset_cardメソッドを読み込む
   before_action :set_card, only: %i(show edit update destroy)
 
@@ -7,7 +8,7 @@ class CardController < ApplicationController
   end
 
   def edit
-  
+    @lists = List.where(user: current_user)
   end
 
   def update

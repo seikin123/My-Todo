@@ -1,4 +1,5 @@
 class ListController < ApplicationController
+  before_action :authenticate_user!
   # edit・updateアクションを呼ぶ前にset_listメソッドを読み込む
   before_action :set_list, only: %i(edit update destroy)
 
