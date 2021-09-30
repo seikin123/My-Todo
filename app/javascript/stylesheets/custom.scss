@@ -5,6 +5,7 @@ body {
 .notice,
 .alert {
   display: none;
+  background: lightgray;
 }
 
 // header
@@ -139,9 +140,3 @@ body {
   }
 }
 
-// .listnewPage {
-//   .new_list {
-//     max-width: 500px;
-//     margin: 100px auto 0;
-//   }
-// }

@@ -2,6 +2,8 @@ class CardController < ApplicationController
   before_action :authenticate_user!
   # show・edit・updateアクションを呼ぶ前にset_cardメソッドを読み込む
   before_action :set_card, only: %i(show edit update destroy)
+  # new・createアクションを呼ぶ前にset_listメソッドを読み込む
+  before_action :set_list, only: %i(new create)
 
   def show
   
@@ -12,8 +14,8 @@ class CardController < ApplicationController
   end
 
   def update
-    @card = Card.find_by(id: params[:id])
     if @card.update(card_params)
+      flash[:notice] = "カードを更新しました。"
       redirect_to :root
     else
       render action: :edit
@@ -22,12 +24,12 @@ class CardController < ApplicationController
 
   def new
     @card = Card.new
-    @list = List.find_by(id: params[:list_id])
   end
 
   def create
     @card = Card.new(card_params)
     if @card.save
+      flash[:notice] = "カードを作成しました。"
       redirect_to :root
     else
       render action: :new
@@ -36,6 +38,7 @@ class CardController < ApplicationController
 
   def destroy
     @card.destroy
+    flash[:alert] = "カードを削除しました。"
     redirect_to :root
   end
 
@@ -46,5 +49,9 @@ class CardController < ApplicationController
 
     def set_card
       @card = Card.find_by(id: params[:id])
+    end
+
+    def set_list
+      @list = List.find_by(id: params[:list_id])
     end
 end
