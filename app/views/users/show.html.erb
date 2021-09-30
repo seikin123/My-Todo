@@ -1,4 +1,20 @@
-<h1>ユーザー</h1>
 
-<%= @user.name %>
-<%= link_to "編集", edit_user_path %>
+
+<div class='carddetailPage'>
+  <div class="container">
+    <div class="cardContents">
+    <h2 class="text-center">マイページ</h2>
+      <div class="cardContents_title">
+        <div>名前</div>
+        <h2><%= @user.name %></h2>
+      </div>
+      <div class="cardContents_listStatus">
+        <div>リスト名</div>
+        <div><%= @user.email %></div>
+      </div>
+      <div class="cardContents_btnArea">
+        <%= link_to '編集する', edit_user_path(@user.id), class: "edit_btn" %>
+      </div>
+    </div>
+  </div>
+</div>
