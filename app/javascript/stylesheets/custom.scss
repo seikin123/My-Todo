@@ -85,18 +85,6 @@ body {
       }
     }
   }
-  .submitBtn {
-    background: #29b744;
-    color: #fff;
-    width: 200px;
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 90px;
-    transition: opacity .5s;
-    &:hover {
-      opacity: .6;
-    }
-  }
 }
 
 // devise_shared_links
@@ -127,6 +115,22 @@ body {
     width: 200px;
     border-radius: 21px;
     background: #29b744;
+    color: #fff;
+    text-align: center;
+    border: none;
+    margin-top: 20px;
+    opacity: 1;
+    transition: opacity .5s;
+    cursor: pointer;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  .guestBtn {
+    padding: 12px;
+    width: 200px;
+    border-radius: 21px;
+    background: blue;
     color: #fff;
     text-align: center;
     border: none;
