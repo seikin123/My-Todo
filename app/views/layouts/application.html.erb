@@ -14,20 +14,9 @@
   </head>
 
   <body>
-  <% if user_signed_in? %>
     <%= render 'layouts/header' %>
-  <% end %>
-
-    <% if flash[:notice] %>
-      <div class="alert alert-info">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
-    <% if flash[:alert] %>
-      <div class="alert alert-danger">
-        <%= flash[:alert] %>
-      </div>
-    <% end %>
+  
+    <%= render 'layouts/notifications' %>
     <%= yield %>
   </body>
 </html>
