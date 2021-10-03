@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# My-ToDo  
+タスク管理を行えるサービスです。　　
 
-Things you may want to cover:
+### テーマを選んだ理由  
 
-* Ruby version
+### ターゲットユーザー  
 
-* System dependencies
+## 開発環境  
+・OS：Linux(CentOS)  
+・言語：HTML,CSS,Ruby,SQL  
+・フレームワーク：Ruby on Rails  
+・IDE：VScode  
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
