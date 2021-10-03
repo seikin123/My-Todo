@@ -1,4 +1,4 @@
-actoryBot.define do
+FactoryBot.define do
   factory :user do
     name { '佐藤' }
     email { 'hogehoge@email.com' }
