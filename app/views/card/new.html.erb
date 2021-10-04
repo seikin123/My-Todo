@@ -2,28 +2,30 @@
   <div class='container'>
     <%= form_with model: @card, url: { action: :create }, html: { class: 'cardnewForm' }, local: true do |f| %>
       <%= f.hidden_field :list_id, value: @list.id %>
-      <% if @card.errors.any? %>
-        <p class="text-danger">タイトルは1～20文字以内で入力してください</p>
-      <% end %>
+      <%= render 'layouts/errors', obj: @card %>
       
       <div class="cardnewForm_title">
         <%= f.label :title %>
         <%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "カード名" %>
       </div>
+
       <div class="cardnewForm_memo">
         <%= f.label :memo %>
         <%= f.text_area :memo, autofocus: true, class: "form-control", placeholder: "詳細" %>
-      
       </div>
-      <p>
+      
+      <div class="cardnewForm_memo">
+      <%= f.label :deadline %>
       <%= f.hidden_field :deadline, :id => "deadline.id" %>
-        <input type="text" id="userYear" >年
-        <input type="text" id="userMonth">月
-        <input type="text" id="userDate" >日
-        <input type="text" id="userHour" >時
-        <input type="text" id="userMin"  >分
-        <input type="text" id="userSec"  >秒
-      </p>
+        <p>※数字のみ入力してください
+        <p><input type="text" id="userYear" class= form-control placeholder="〇〇〇〇年">年
+        <input type="text" id="userMonth" class= form-control placeholder="〇〇月">月
+        <input type="text" id="userDate" class= form-control placeholder="〇〇日">日
+        <input type="text" id="userHour" class= form-control placeholder="〇〇時">時
+        <input type="text" id="userMin"  class= form-control placeholder="〇〇分">分
+        <input type="text" id="userSec"  class= form-control placeholder="〇〇秒">秒
+        </p>
+      </div>
       <p id="RealtimeCountdownArea" ></p> 
       <div class="text-center"><%= f.submit "作成する", class: "submitBtn" %></div>
     <% end %>

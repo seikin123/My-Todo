@@ -4,4 +4,5 @@ class Card < ApplicationRecord
 
   validates :title, presence: true, length: { in: 1..20 }
   validates :memo,  length: { maximum: 1000 }
+  validates :deadline, presence: true
 end

@@ -17,10 +17,12 @@
       </div>
 
       <div class="cardContents_listStatus">
-        <span>期限  <%= @card.deadline %></span>
+        <div>期限</div>
+        <h4><%= @card.deadline %></h4>
       </div>
 
       <div class="cardContents_listStatus">
+      <h3>
         <input type="hidden" id="userYear" value = "<%= @card.deadline.year %>"  > 
         <input type="hidden" id="userMonth"value = "<%= @card.deadline.month %>" >
         <input type="hidden" id="userDate" value = "<%= @card.deadline.day %>" >
@@ -28,6 +30,7 @@
         <input type="hidden" id="userMin"  value = "<%= @card.deadline.min %>" >
         <input type="hidden" id="userSec"  value = "<%= @card.deadline.sec %>" >
       <div id="RealtimeCountdownArea" ></div>
+      </h3>
       </div>
 
       <div class="cardContents_btnArea">
