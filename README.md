@@ -28,7 +28,7 @@ todoリストを正しく使いこなせるようになると、仕事の効率�
 * IDE：VScode  
 
 ### 使用方法  
-> git clone https://github.com/seikin123/My-Todo  
+> git clone git@github.com:seikin123/My-Todo.git  
 > bundle install  
 > yarn install  
 > rails db:migrate  
