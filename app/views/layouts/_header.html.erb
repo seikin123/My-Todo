@@ -1,7 +1,7 @@
 <header class="header">
       <nav class="nav">
         <ul class="header_menu">
-          <li class="header_menu_title"><%= link_to "Todo", root_path, class: "nav-link" %></li>
+          <li class="header_menu_title"><%= link_to "My-Todo", root_path, class: "nav-link" %></li>
           <% if user_signed_in? %>
             <li class="nav-link"><%= current_user.name %>さん</li>
           <li>
