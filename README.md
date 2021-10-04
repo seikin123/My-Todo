@@ -23,8 +23,13 @@
 todoリストを正しく使いこなせるようになると、仕事の効率が上がるだけでなく、漏れなく正確にタスク処理ができるようになります。  
 
 ## 開発環境  
-* OS：Linux(CentOS)  
 * 言語：HTML, CSS, JavaScript, Ruby, SQL  
 * フレームワーク：Ruby on Rails  
 * IDE：VScode  
 
+### 使用方法  
+> git clone https://github.com/seikin123/My-Todo  
+> bundle install  
+> yarn install  
+> rails db:migrate  
+> rails db:seed(ゲストログインで一度ログインしてからお願いします。)  
