@@ -61,6 +61,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'rubocop'
 gem 'rubocop-rails'
+# 日本語化
 gem 'rails-i18n'
 
-gem 'pg', group: :production  # この1行を追加
+gem 'pg', group: :production
