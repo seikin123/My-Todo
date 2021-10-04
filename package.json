@@ -17,6 +17,11 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "autoprefixer": "^10.3.6",
+    "postcss": "^8.3.8",
+    "postcss-cli": "^9.0.1",
+    "sass": "^1.42.1",
     "webpack-dev-server": "^3"
   }
+  
 }

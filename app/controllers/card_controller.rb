@@ -2,7 +2,6 @@ class CardController < ApplicationController
   before_action :authenticate_user!
   # show・edit・updateアクションを呼ぶ前にset_cardメソッドを読み込む
   before_action :set_card, only: %i(show edit update destroy)
-  # new・createアクションを呼ぶ前にset_listメソッドを読み込む
   before_action :set_list, only: %i(new create)
 
   def show
@@ -44,7 +43,7 @@ class CardController < ApplicationController
 
   private
     def card_params
-      params.require(:card).permit(:title, :memo, :list_id)
+      params.require(:card).permit(:title, :memo, :list_id, :deadline)
     end
 
     def set_card
